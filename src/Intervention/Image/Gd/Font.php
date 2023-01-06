@@ -207,7 +207,7 @@ class Font extends \Intervention\Image\AbstractFont
             imagealphablending($image->getCore(), true);
 
             // draw ttf text
-            imagettftext($image->getCore(), $this->getPointSize(), $this->angle, $posx, $posy, $color->getInt(), $this->file, $this->text);
+            imagettftext($image->getCore(), $this->getPointSize(), $this->angle, intval($posx), intval($posy), $color->getInt(), $this->file, $this->text);
 
         } else {
 
